@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Django CRM 2023</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="David Robb" />
+        <meta name="description" content="Codemy.com - Django CRM project" />
+        <meta property="og:image" content="./assets/logo.png" />
+        <meta property="og:description" content="Codemy.com - Django CRM project" />
+        <meta property="og:title" content="Codemy.com - Django CRM project" />
+        <meta name="twitter:title" content="Django CRM 2023" />
+        <link rel="icon" href="{% static 'assets/favicon.svg' %}" type="image/svg">
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}" type="text/css">
+        <script src="{% static 'js/main.js' %}" defer></script>
+    </head>
+    <body>
+        <div class="container mt-4">
+            {% block content %}
+
+            {% endblock content %}
+        </div>
+    </body>
+</html>
