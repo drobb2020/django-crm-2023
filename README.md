@@ -33,7 +33,7 @@
   <h3 align="center">django-crm-2023</h3>
 
   <p align="center">
-    A simple CRM project presented by Codemy.com on [YouTube](https://www.youtube.com/watch?v=IJnccWS_sCs&t=5885s)
+    A simple CRM project presented by Codemy.com on YouTube.
     <br />
     <a href="https://github.com/drobb2020/django-crm-2023"><strong>Explore the docs »</strong></a>
     <br />
@@ -186,7 +186,7 @@ Project Link: [https://github.com/drobb2020/django-crm-2023](https://github.com/
 
 ## Acknowledgments
 
-Thank you to John Elder of Codemy.com for creating this YouTube tutorial
+Thank you to John Elder of Codemy.com for creating this [YouTube tutorial](https://www.youtube.com/watch?v=IJnccWS_sCs&t=5885s)
 
 - [Choose an Open Source License](https://choosealicense.com)
 - [Img Shields](https://shields.io)
