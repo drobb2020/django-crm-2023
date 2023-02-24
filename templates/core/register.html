@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-4 pt-5">
+    <img
+      src="{% static 'assets/register.jpg' %}"
+      alt="register"
+      class="img-fluid"
+    />
+  </div>
+  <div class="col-md-6">
+    <h1>Register</h1>
+    <form action="" method="POST">
+      {% csrf_token %}
+      {% if form.errors %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <p>Your submission has errors</p>
+        {% for field in form %}
+        {% if field.errors %}
+        {{ field.errors }}
+        {% endif %}
+        {% endfor %}
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="close"
+        ></button>
+      </div>
+      {% endif %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-secondary w-100">Register</button>
+    </form>
+  </div>
+</div>
+
+{% endblock content %}
