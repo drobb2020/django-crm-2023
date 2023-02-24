@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h1 class="my-4">Customer Record for: {{ record }}</h1>
+
+<div class="card mb-3" style="max-width: 600px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{% static 'assets/avatar.png' %}" class="img-fluid mt-4 ms-2" alt="Judd Hirsch">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ record.first_name }} {{ record.last_name }}</h5>
+        <p class="card-text"><p><strong>Email: </strong>{{ record.email }}</p>
+        <p class="card-text"><p><strong>Phone: </strong>{{ record.phone }}</p>
+        <p class="card-text"><p><strong>Address: </strong>{{ record.address }}</p>
+        <p class="card-text"><p>{{ record.city }}, {{ record.state }} {{ record.zipcode }}</p>
+      </div>
+      <div class="card-footer">
+        <p class="card-text m-0"><small class="text-muted">Record created: {{ record.created_at|timesince }} ago</small></p>
+        <p class="card-text m-0"><small class="text-muted">Last updated: {{ record.updated_at|timesince }} ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <a href="{% url 'update' record.id %}" class="btn btn-success mb-3" style="width: 600px;">Update Record</a>
+</div>
+<div>
+  <a href="{% url 'delete' record.id %}" class="btn btn-danger mb-3" style="width: 600px;">Delete Record</a>
+</div>
+<div>
+    <a href="{% url 'index' %}" class="btn btn-outline-secondary mb-3" style="width: 600px;">👈 Go Back</a>
+</div>
+
+{% endblock content %}
