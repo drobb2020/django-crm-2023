@@ -17,6 +17,10 @@ psycopg2==2.9.9
 python-decouple==3.8
     # via -r requirements.in
 sqlparse==0.4.4
+    <<<<<<< snyk-fix-fb83300be0fa34fc01f66d0de5e9fa55
+    # via django
+=======
     # via
     #   -r requirements.in
     #   django
+>>>>>>> main
